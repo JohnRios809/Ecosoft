@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estructura del layout */
+body {
+    display: flex;
+    height: 100vh;
+}
+
+/* Slidebar */
+.slidebar {
+    border: 2px solid #4a7c50;
+    width: 250px;
+    height: 100%;
+    background-color: #f0e9e9;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #4a7c50;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Botones del menú */
+.menu-btn {
+    padding-top: 50%;
+    width: 100%;
+    padding: 10px;
+    margin: 1px;
+    background-color: #4a7c50;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.menu-btn:hover {
+    background-color: #3b6542;
+}
+
+/* Botón de cerrar sesión */
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Sección principal */
+.main-content {
+    color: #000000;
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: baseline;
+    justify-content: center ; 
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+/* Botón Modo oscuro */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #4a7c50;
+    color: white;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #225930;
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .1s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2f5d38;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.main-content.bottom-window {
+    position: fixed;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-30%, -30%); /* Ajustar la posición para centrar */
+    width: 50%; /* Ajustar el ancho según sea necesario */
+    height: 60%; /* Ajustar el alto según sea necesario */
+    background-color: #f0e9e9;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px -4px -5px -4px rgba(0, 0, 0, 0.2);
+    max-height: 60vh; /* 30% de la altura de la ventana */
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+   
+}
+#resultados {
+
+    font-weight: bold;
+    color: #b3b3b3;
+    position: fixed;
+    left: 7%;
+    
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+/* Botón principal */
+.main-btn {
+    position: fixed;
+    width: 70px;
+    height: 30px;
+    padding: 7px;
+    margin: 20px auto;
+    background-color: #4a7c50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    top: 22%;
+    left: 35%;
+}
+.main-btn:hover {
+    background-color: #3b6542;
+}
