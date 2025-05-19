@@ -1,2 +1,0 @@
-# Ecosoft
-Proyecto
